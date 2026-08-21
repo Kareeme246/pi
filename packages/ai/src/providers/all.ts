@@ -35,6 +35,7 @@ import { qwenTokenPlanProvider } from "./qwen-token-plan.ts";
 import { qwenTokenPlanCnProvider } from "./qwen-token-plan-cn.ts";
 import { qwenTokenPlanIndividualProvider } from "./qwen-token-plan-individual.ts";
 import { radiusProvider } from "./radius.ts";
+import { rampRouterProvider } from "./ramp-router.ts";
 import { togetherProvider } from "./together.ts";
 import { vercelAIGatewayProvider } from "./vercel-ai-gateway.ts";
 import { xaiProvider } from "./xai.ts";
@@ -48,8 +49,8 @@ import { zaiCodingCnProvider } from "./zai-coding-cn.ts";
 export { radiusProvider };
 
 /** Providers present in the generated catalog. `KnownProvider` additionally
- * includes purely dynamic providers (e.g. "radius") that have no static
- * catalog entry. */
+ * includes purely dynamic providers (e.g. "radius", "ramp-router") that have
+ * no static catalog entry. */
 export type BuiltinProvider = keyof typeof MODELS;
 
 type BuiltinModelApi<
@@ -119,6 +120,7 @@ export function builtinProviders(): Provider[] {
 		qwenTokenPlanCnProvider(),
 		qwenTokenPlanIndividualProvider(),
 		radiusProvider(),
+		rampRouterProvider(),
 		togetherProvider(),
 		vercelAIGatewayProvider(),
 		xaiProvider(),
