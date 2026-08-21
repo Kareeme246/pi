@@ -3,7 +3,7 @@ import {
 	isSelectableRampRouterModel,
 	type RampRouterModelEntry,
 	toRampRouterModel,
-} from "../src/providers/ramp-router.ts";
+} from "../src/providers/ramp-router-config.ts";
 
 // Fixtures trimmed from a real `GET https://api.router.com/v1/models` response.
 const CLAUDE_SONNET_5: RampRouterModelEntry = {
